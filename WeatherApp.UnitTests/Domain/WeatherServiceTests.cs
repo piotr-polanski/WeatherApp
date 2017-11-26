@@ -9,7 +9,7 @@ namespace WeatherApp.UnitTests.Domain
     public class WeatherServiceTests
     {
         [Fact]
-        public void GetWeather_Given_LondonAndUk_Returns_WeatherForThisCityAndCountry()
+        public void GetWeather_Given_LondonAndUk_Returns_WeatherFromExternalWeatherService()
         {
             //arrange
             var externalWeatherService = Substitute.For<IExternalWeatherService>();

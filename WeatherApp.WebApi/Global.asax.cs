@@ -3,10 +3,8 @@ using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
 using AutoMapper;
-using WeatherApp.Domain;
-using WeatherApp.Domain.ExternalWeatherService;
+using WeatherApp.WebApi.IoC;
 using WeatherApp.WebApi.Mappers;
-using WeatherApp.WebApi.Models;
 
 namespace WeatherApp.WebApi
 {
@@ -16,16 +14,11 @@ namespace WeatherApp.WebApi
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
-            Mapper.Initialize(cfg => {
-                cfg.CreateMap<Weather, WeatherModel>();
-            });
-
+            Mapper.Initialize(Mappings.CreateMappings);
 
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<WeatherService>().As<IWeatherService>();
-            builder.RegisterType<OpenWeatherMapService>().As<IExternalWeatherService>();
-            builder.RegisterType<DefaultMapper>().As<ICustomMapper>();
+            IoCRegistration.RegisterTypes(builder);
 
             // Get your HttpConfiguration.
             var config = GlobalConfiguration.Configuration;

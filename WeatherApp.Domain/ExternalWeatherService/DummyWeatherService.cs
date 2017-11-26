@@ -1,6 +1,6 @@
 ﻿namespace WeatherApp.Domain.ExternalWeatherService
 {
-    public class OpenWeatherMapService : IExternalWeatherService
+    public class DummyWeatherService : IExternalWeatherService
     {
         public Weather GetCurrentWeather(string country, string city)
         {

@@ -14,7 +14,7 @@ namespace WeatherApp.UnitTests.WebApi
     public class WeatherControllerTests
     {
         [Fact]
-        public void Get_Given_CountryAndCity_Returns_WeatherModelFromMapper()
+        public void Get_Given_CountryAndCity_Returns_WeatherModelMappedFromWeather()
         {
             //arrange
             var weatherFromService = new Weather(

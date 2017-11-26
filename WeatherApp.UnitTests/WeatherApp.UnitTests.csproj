@@ -79,7 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\ExternalWeatherService\OpenWeatherMapServiceTests.cs" />
+    <Compile Include="Domain\ExternalWeatherService\DummyWeatherServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\WeatherServiceTests.cs" />
     <Compile Include="WebApi\WeatherControllerTests.cs" />
