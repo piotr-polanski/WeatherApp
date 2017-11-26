@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace WeatherApp.WebApi
 {
@@ -16,7 +13,7 @@ namespace WeatherApp.WebApi
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/Weather/{country}/{city}",
+                routeTemplate: "api/{country}/{city}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }

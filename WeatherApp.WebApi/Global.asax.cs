@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Web;
+﻿using System.Reflection;
 using System.Web.Http;
-using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.WebApi;
+using AutoMapper;
 using WeatherApp.Domain;
 using WeatherApp.Domain.ExternalWeatherService;
+using WeatherApp.WebApi.Mappers;
+using WeatherApp.WebApi.Models;
 
 namespace WeatherApp.WebApi
 {
@@ -17,10 +15,17 @@ namespace WeatherApp.WebApi
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
+            Mapper.Initialize(cfg => {
+                cfg.CreateMap<Weather, WeatherModel>();
+            });
+
+
             var builder = new ContainerBuilder();
 
             builder.RegisterType<WeatherService>().As<IWeatherService>();
             builder.RegisterType<OpenWeatherMapService>().As<IExternalWeatherService>();
+            builder.RegisterType<DefaultMapper>().As<ICustomMapper>();
 
             // Get your HttpConfiguration.
             var config = GlobalConfiguration.Configuration;
