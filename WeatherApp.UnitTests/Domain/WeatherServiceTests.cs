@@ -1,9 +1,10 @@
 ﻿using NSubstitute;
 using Shouldly;
+using WeatherApp.Domain;
 using WeatherApp.Domain.ExternalWeatherService;
 using Xunit;
 
-namespace WeatherApp.Domain.UnitTests
+namespace WeatherApp.UnitTests.Domain
 {
     public class WeatherServiceTests
     {

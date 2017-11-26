@@ -2,18 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("WeatherApp.Domain.UnitTests")]
+[assembly: AssemblyTitle("WeatherApp.UnitTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WeatherApp.Domain.UnitTests")]
+[assembly: AssemblyProduct("WeatherApp.UnitTests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("57f4d72e-172a-4a7c-97ac-07139fcd59e1")]
+[assembly: Guid("5eca2919-3d17-443f-91f7-3dcb14b175fc")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]

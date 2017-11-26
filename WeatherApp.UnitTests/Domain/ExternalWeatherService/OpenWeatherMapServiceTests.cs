@@ -3,7 +3,7 @@ using Shouldly;
 using WeatherApp.Domain.ExternalWeatherService;
 using Xunit;
 
-namespace WeatherApp.Domain.UnitTests.ExternalWeatherService
+namespace WeatherApp.UnitTests.Domain.ExternalWeatherService
 {
     public class OpenWeatherMapServiceTests
     {
