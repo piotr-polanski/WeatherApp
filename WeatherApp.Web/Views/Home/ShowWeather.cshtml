@@ -1,0 +1,35 @@
+﻿@model WeatherApp.Web.Models.WeatherModel
+
+@{
+    ViewBag.Title = "ShowWeather";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Current dummy weather</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Temperature.Format)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperature.Format)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Temperature.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperature.Value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Humidity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Humidity)
+        </dd>
+
+    </dl>
+</div>
