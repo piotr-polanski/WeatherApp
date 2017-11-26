@@ -13,15 +13,8 @@ namespace WeatherApp.UnitTests.Domain
         {
             //arrange
             var externalWeatherService = Substitute.For<IExternalWeatherService>();
-            var weatherInLondon = new Weather()
-            {
-                Temperature = new Temperature()
-                {
-                    Format = "Celcius",
-                    Value = 16
-                },
-                Humidity = 88
-            };
+            var weatherInLondon = new Weather(new Temperature("Celcius", 16), 88);
+
             externalWeatherService.GetCurrentWeather("UK", "London").Returns(weatherInLondon);
             var sut = new WeatherService(externalWeatherService);
 

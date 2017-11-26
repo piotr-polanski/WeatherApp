@@ -4,15 +4,7 @@
     {
         public Weather GetCurrentWeather(string country, string city)
         {
-            return new Weather()
-            {
-                Temperature = new Temperature()
-                {
-                    Format = "Celcius",
-                    Value = 16
-                },
-                Humidity = 88
-            };
+            return new Weather(new Temperature("Celcius", 16), 88);
         }
     }
 }

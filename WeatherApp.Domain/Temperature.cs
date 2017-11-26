@@ -2,7 +2,13 @@
 {
     public class Temperature
     {
-        public string Format { get; set; }
-        public int Value { get; set; }
+        public Temperature(string format, int value)
+        {
+            Format = format;
+            Value = value;
+        }
+
+        public string Format { get; }
+        public int Value { get; }
     }
 }

@@ -17,7 +17,8 @@ namespace WeatherApp.UnitTests.WebApi
         public void Get_Given_CountryAndCity_Returns_WeatherModelFromMapper()
         {
             //arrange
-            var weatherFromService = new Weather();
+            var weatherFromService = new Weather(
+                new Temperature("", 0), 0);
             var weatherService = Substitute.For<IWeatherService>();
             weatherService.GetWeather(Arg.Any<string>(), Arg.Any<string>())
                 .Returns(weatherFromService);

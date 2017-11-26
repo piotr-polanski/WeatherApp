@@ -2,7 +2,13 @@
 {
     public class Weather
     {
-        public Temperature Temperature { get; set; }
-        public int Humidity { get; set; }
+        public Weather(Temperature temperature, int humidity)
+        {
+            Temperature = temperature;
+            Humidity = humidity;
+        }
+
+        public Temperature Temperature { get; }
+        public int Humidity { get;  }
     }
 }
