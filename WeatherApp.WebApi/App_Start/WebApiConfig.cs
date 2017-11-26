@@ -16,7 +16,7 @@ namespace WeatherApp.WebApi
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "api/Weather/{country}/{city}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
